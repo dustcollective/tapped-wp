@@ -1,0 +1,1212 @@
+/*
+Theme Name: Tapped Brew Co (WP)
+Theme URI: http://www.tappedbrewco.com
+Description: Tapped Brew Co (WP) build
+Version: 1.0
+Author: dust
+Author URI: http://www.du.st
+*/
+
+@import 'css/foundation.min.css';
+@import 'css/fancybox.css';
+@import 'css/animate.min.css';
+@import 'webfonts/ss-social.css';
+@import 'webfonts/ss-standard.css';
+
+@font-face {
+    font-family: 'Bureau Grotesque Regular';
+    src: url('webfonts/bureau-reg-webfont.eot');
+    src: url('webfonts/bureau-reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/bureau-reg-webfont.woff') format('woff'),
+         url('webfonts/bureau-reg-webfont.ttf') format('truetype'),
+         url('webfonts/bureau-reg-webfont.svg#bureaugrotesquefivethree') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bureau Grotesque Light';
+    src: url('webfonts/bureau-light-webfont.eot');
+    src: url('webfonts/bureau-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/bureau-light-webfont.woff') format('woff'),
+         url('webfonts/bureau-light-webfont.ttf') format('truetype'),
+         url('webfonts/bureau-light-webfont.svg#bureaugrotesque_fiveoneRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Clarendon Condensed Bold';
+    src: url('webfonts/clar67w-webfont.eot');
+    src: url('webfonts/clar67w-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/clar67w-webfont.woff') format('woff'),
+         url('webfonts/clar67w-webfont.ttf') format('truetype'),
+         url('webfonts/clar67w-webfont.svg#clarendon_condensedbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Overlay */
+
+#overlay-preload {
+	background: #ffffff;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 999999;
+}
+body.home #overlay-preload, body.page-id-201 #overlay-preload {
+	background: #101532 url('img/bg/union-jack.png') no-repeat 140px 50% fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: -25%;
+    z-index: 999999;
+}
+
+/* Global */
+
+html, body, .row, .columns {
+	height: 100%;
+}
+.row {
+	margin: 0;
+}
+.columns {
+	padding: 0;
+}
+body {
+	background: #FFF6E1;
+	margin-bottom: 0;
+	transition: all .2s linear; 
+    -o-transition: all .2s linear; 
+    -moz-transition: all .2s linear; 
+    -webkit-transition: all .2s linear;
+}
+#mti_wfs_colophon {
+	display: none !important;
+}
+.ss-icon {
+	vertical-align: middle;
+}
+.standard-button {
+	font-family: 'Clarendon Condensed Bold', sans-serif;
+	background: #ffffff;
+	background: rgba(255,255,255,0.9);
+	display: inline-block;
+	border: 5px solid #ffffff;
+	color: #000000;
+	padding: 15px 25px;
+	font-size: 1.2em;
+}
+.standard-button:hover {
+	background: #000000;
+	background: rgba(0,0,0,0.9);
+	color: #ffffff;
+	border: 5px solid #000000;
+}
+h1, h2, h3, h4 {
+	font-family: 'Clarendon Condensed Bold', sans-serif;
+	letter-spacing: 1px;
+	margin: 0 0 25px 0;
+}
+[class*="column"] + [class*="column"]:last-child {
+	float: left;
+}
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+.clearfix:before,
+.clearfix:after {
+	content: '\0020';
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+.clearfix:after {
+	clear: both;
+}
+
+/* Header */
+
+.fixed-navigation {
+	position: fixed;
+	background: #fffbf2;
+	height: 100%;
+	right: 0;
+	top: 0;
+	width: 25%;
+	text-align: center;
+}
+a.logo {
+	display: inline-block;
+	background: url('img/logo-nocircle.png') 50% 50% no-repeat;
+	background: url('img/logo-nocircle.svg') 50% 50% no-repeat;
+	width: 80%;
+	max-width: 250px;
+	height: 140px;
+	background-size: contain;
+	background-origin: content-box;
+	text-indent: -99999px;
+	margin: 1em 0;
+}
+
+/* Navigation */
+
+.menu-main-navigation-container {
+	font-family: 'Bureau Grotesque Regular';
+	margin: 5em 0 3.5em 0;
+}
+.menu-main-navigation-container ul.menu, .menu-main-navigation-container ul.menu li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.menu-main-navigation-container ul.menu {
+	 text-align: left;
+}
+.menu-main-navigation-container ul.menu li {
+	display: block;
+	margin-left: 51%;
+}
+.menu-main-navigation-container ul.menu li a {
+	font-size: 17px;
+	color: #000000;
+}
+.menu-main-navigation-container ul.menu li a:hover {
+	border-bottom: 4px solid;
+}
+.social-media-container ul {
+	margin-left: 49% !important;
+	text-align: left;
+}
+.social-media-container ul, .social-media-container ul li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.social-media-container ul li {
+	display: inline-block;
+	margin-right: 1em;
+}
+.social-media-container ul li:last-child {
+	margin-right: 0;
+}
+.social-media-container ul li a {
+	color: #000000;
+	font-size: 1.5em;
+}
+.social-media-container ul li a:hover {
+	color: #000000;
+}
+.mobile-navigation {
+	display: none;
+}
+
+/* Age Verification */
+
+#av-overlay-wrap {
+	background: rgba(255,255,255,0.8) !important;
+}
+#av-overlay {
+	position: absolute !important;
+	top: 45px !important;
+	left: 0 !important;
+	width: 30% !important;
+	padding: 30px !important;
+	height: 100% !important;
+	background: #1b234b !important;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #ffffff !important;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+	margin: 0 auto 20px 0 !important;
+}
+#av-overlay h1 {
+	font-family: 'Bureau Grotesque Regular';
+	font-size: 21px !important;
+	color: #ffffff !important;
+	text-transform: none !important;
+	line-height: 24px;
+}
+#av-overlay h2 {
+	font-family: 'Bureau Grotesque Regular';
+	font-size: 14px !important;
+	color: #ffffff !important;
+	text-transform: none !important;
+	line-height: 17px;
+}
+#av-overlay input[type='text'] {
+	display: inline-block !important;
+	width: 70px !important;
+	text-align: center !important;
+	height: 50px !important;
+	font-size: 18px !important;
+	letter-spacing: 1px !important;
+}
+#av-overlay p {
+	font-family: 'Bureau Grotesque Regular', sans-serif;
+	letter-spacing: 1px;
+	font-size: 14px;
+}
+#av-overlay p.submit label {
+	color: #ffffff !important;
+	font-size: 13px !important;
+}
+#av-overlay p.submit input[type='submit'] {
+	font-family: 'Bureau Grotesque Regular', sans-serif !important;
+	background: #f07d00 !important;
+	border: 0 none !important;
+	padding: 15px 30px !important;
+	font-size: 24px !important;
+	letter-spacing: 1px !important;
+	color: #ffffff !important;
+	cursor: pointer;
+	float: right;
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+#av-overlay p.submit input[type='submit']:hover {
+	background: #cf4549 !important;
+}
+#av-overlay form {
+	margin: 0 !important;
+}
+#av-overlay .error {
+	padding: 16px !important;
+	background: #f07d00 !important;
+	border: 0 none !important;
+	border-radius: 0 !important;
+	margin: 0 0 15px 0 !important;
+	display: inline-block !important;
+}
+#av-overlay p.age-disclaimer {
+	font-size: 10px;
+}
+#av-overlay a {
+	color: #ffffff;
+}
+#av-overlay a:hover {
+	border-bottom: 2px solid;
+}
+#av-overlay span.privacy-modal {
+	cursor: pointer;
+}
+#av-overlay span.privacy-modal:hover {
+	border-bottom: 2px solid;
+}
+.privacy-statement-pre-age {
+	font-family: 'Bureau Grotesque Regular', sans-serif;
+	padding: 30px;
+	background: #f07d00;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #ffffff;
+	position: fixed;
+	z-index: 99999;
+	width: 25%;
+	top: 20px;
+	left: 20px;
+	display: none;
+}
+.privacy-statement-pre-age p {
+	font-size: 14px;
+}
+.privacy-statement-pre-age p:last-of-type {
+	margin: 0;
+}
+.privacy-statement-pre-age span {
+	position: absolute;
+	top: 20px;
+	right: 15px;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+/* Content */
+
+.content-container {
+	height: 100%;
+}
+.content-area {
+	padding: 30px;
+	background: #ffffff;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #141b41;
+	margin-bottom: 0;
+	position: relative;
+	min-height: 100%;
+}
+.content-area p {
+	font-family: 'Bureau Grotesque Regular';
+	font-size: 12px;
+}
+.content-area a {
+	color: #ffffff;
+}
+.content-area a:hover {
+	border-bottom: 2px solid;
+}
+.content-area h3 {
+	font-size: 34px;
+	color: #141b41;
+	font-weight: normal;
+}
+.content-area h4 {
+	font-family: 'Bureau Grotesque Regular';
+	font-size: 21px;
+	color: #ffffff;
+	font-weight: normal;
+	margin-top: -15px;
+}
+.content-area p, ul li {
+	letter-spacing: 1px;
+}
+.content-area p:last-of-type {
+	margin-bottom: 0;
+}
+.content-area ul li {
+	list-style: none;
+	text-indent: -17px;
+}
+.content-area ul li:before {
+	content: '-';
+	padding-right: 10px;
+}
+.content-area.off-white-content {
+	background: #fff6e1;
+	color: #141b41;
+}
+.content-area.off-white-content a {
+	color: #141b41;
+}
+.content-area.navy-content {
+	background: #141b41;
+	color: #ffffff;
+}
+.content-area.navy-content h3 {
+	color: #ffffff;
+}
+.content-area.blue-content,
+.content-area.miami-weisse-content {
+	background: #0089a7;
+	color: #ffffff;
+}
+.content-area.blue-content h3,
+.content-area.miami-weisse-content h3 {
+	color: #ffffff;
+}
+.content-area.green-content, 
+.content-area.bramling-content {
+	background: #00855a;
+	color: #ffffff;
+}
+.content-area.green-content h3,
+.content-area.bramling-content h3 {
+	color: #ffffff;
+}
+.content-area.red-content,
+.content-area.bullet-content {
+	background: #f07d00;
+	color: #ffffff;
+}
+.content-area.red-content h3,
+.content-area.bullet-content h3 {
+	color: #ffffff;
+}
+.content-area.gold-content,
+.content-area.ale-content {
+	background: #be863c;
+	color: #ffffff;
+}
+.content-area.gold-content h3,
+.content-area.ale-content h3 {
+	color: #ffffff;
+}
+.content-area.red-red-content,
+.content-area.bullet-content {
+	background: #bf3a3f;
+	color: #ffffff;
+}
+.content-area.red-red-content h3,
+.content-area.bullet-content h3 {
+	color: #ffffff;
+}
+.delay-1 {
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	-o-animation-delay: 1s;
+	-ms-animation-delay: 1s;
+	animation-delay: 1s;
+}
+.delay-2 {
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	-o-animation-delay: 2s;
+	-ms-animation-delay: 2s;
+	animation-delay: 2s;
+}
+.delay-3 {
+	-webkit-animation-delay: 3s;
+	-moz-animation-delay: 3s;
+	-o-animation-delay: 3s;
+	-ms-animation-delay: 3s;
+	animation-delay: 3s;
+}
+.first-margin-offset {
+	margin-top: 45px;
+}
+.suffix_three {
+	margin-right: 25%;
+}
+
+/* Journal */
+
+body.page-template-template-journal-php .content-container {
+	margin-top: 0;
+}
+body.page-template-template-journal-php {
+	background: #1b234b;
+	margin-bottom: 0;
+}
+body.page-template-template-journal-php .each-journal-image-container {
+	position: relative;
+}
+body.page-template-template-journal-php .each-journal-image {
+	position: relative;
+}
+body.page-template-template-journal-php .each-journal-image img {
+	display: block;
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+}
+body.page-template-template-journal-php .each-journal-image img:hover {
+	filter: grayscale(0%);
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	-ms-filter: grayscale(0%);
+	-o-filter: grayscale(0%);
+}
+body.page-template-template-journal-php .each-journal-image-caption {
+	width: 50%;
+	background: #0089a7;
+	color: #ffffff;
+	position: absolute;
+	top: 0;
+	margin-left: 100%;
+	height: 100%;
+	padding: 30px;
+}
+body.page-template-template-journal-php .each-journal-image-caption p {
+	 font-family: 'Bureau Grotesque Regular';
+	 font-size: 12px;
+	 margin: 0;
+}
+body.page-template-template-journal-php .off-white-content.twitter-feed {
+	position: fixed;
+	width: 25%;
+}
+
+/* Blog */
+
+body.blog .each-journal-image-container {
+	position: relative;
+}
+body.blog .content-container .row > div:first-child {
+	margin-top: 45px;
+}
+body.blog .each-journal-image {
+	position: relative;
+}
+body.blog .each-journal-image img {
+	display: block;
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+}
+body.blog .each-journal-image img:hover {
+	filter: grayscale(0%);
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	-ms-filter: grayscale(0%);
+	-o-filter: grayscale(0%);
+}
+body.blog .each-journal-image-caption {
+	background: #0089a7;
+	color: #ffffff;
+	height: 100%;
+	padding: 30px;
+}
+body.blog .each-journal-text-only {
+	color: #ffffff;
+	padding: 30px;
+}
+body.blog .each-journal-text-only p {
+	font-family: 'Clarendon Condensed Bold', sans-serif;
+	font-size: 34px;
+}
+body.blog .each-journal-text-only-time {
+	margin-bottom: 10px;
+}
+body.blog .each-journal-text-only-text p {
+	font-family: 'Bureau Grotesque Regular';
+	font-size: 12px;
+}
+body.blog .each-journal-image-caption p {
+	 font-family: 'Bureau Grotesque Regular';
+	 font-size: 12px;
+}
+body.blog .each-journal-image-caption p:last-of-type,
+body.blog .each-journal-text-only p:last-of-type {
+	margin: 0;
+}
+body.blog .each-journal-image-caption a,
+body.blog .each-journal-text-only a {
+	color: #ffffff;
+}
+body.blog .off-white-content.twitter-feed {
+	position: fixed;
+	top: 0;
+	width: 25%;
+	margin-left: 50%;
+}
+body.blog .blog-pagination-container .six {
+	background: #fff6e1;
+}
+body.blog .blog-pagination-container .less-posts a {
+	font-family: 'Bureau Grotesque Regular';
+	background: #fff6e1;
+	display: inline-block;
+	color: #141b41;
+	padding: 20px;
+	float: left;
+}
+body.blog .blog-pagination-container .more-posts a {
+	font-family: 'Bureau Grotesque Regular';
+	background: #fff6e1;
+	display: inline-block;
+	color: #141b41;
+	padding: 20px;
+	float: right;
+}
+
+/* Brews (landing) */
+
+body.page-template-template-brews-php .each-brew-container {
+	background: #fff6e1;
+	min-height: 100%;
+	position: relative;
+	z-index: 99999;
+}
+body.page-template-template-brews-php .each-brew {
+	display: table;
+	text-align: center;
+	color: #C4303A;
+	padding: 30px;
+	background: #fff6e1;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	cursor: pointer;
+	transition: all .2s linear; 
+    -o-transition: all .2s linear; 
+    -moz-transition: all .2s linear; 
+    -webkit-transition: all .2s linear;
+}
+body.page-template-template-brews-php .each-brew:hover {
+	background: #ffffff;
+}
+body.page-template-template-brews-php .each-brew.active span.each-brew-title {
+	border-bottom: 3px solid;
+}
+body.page-template-template-brews-php .each-brew span.each-brew-title {
+	font-family: 'Clarendon Condensed Bold';
+	font-size: 34px;
+	display: table-cell;
+	vertical-align: middle;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+body.page-template-template-brews-php .each-brew span.each-brew-description {
+	font-family: 'Bureau Grotesque Regular';
+	font-size: 14px;
+	color: #141b41;
+	display: block;
+	text-align: center;
+	margin-top: 5px;
+	text-transform: none;
+	letter-spacing: 1px;
+}
+body.page-template-template-brews-php .each-brew.ale {
+	color: #be863c;
+}
+body.page-template-template-brews-php .each-brew.bramling {
+	color: #00855a;
+}
+body.page-template-template-brews-php .each-brew.bullet {
+	color: #f07d00;
+}
+body.page-template-template-brews-php .each-brew.miami-weisse {
+	color: #0089a7;
+}
+body.page-template-template-brews-php .each-brew-separator {
+	background: #1B234B;
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	text-align: center;
+	margin: 10px auto;
+}
+body.page-template-template-brews-php .each-brew-content {
+	left: -33.3333%;
+	display: none;
+}
+body.page-template-template-brews-php .each-brew-content .title-alcohol {
+	font-size: 14px;
+}
+body.page-template-template-brews-php .each-brew-separator:last-of-type {
+	display: none;
+}
+body.page-template-template-brews-php .each-brew-content p {
+	font-size: 12px;
+}
+body.page-template-template-brews-php .each-brew-image {
+	position: relative;
+	z-index: 9999;
+}
+body.page-template-template-brews-php .each-brew-image img {
+	width: 100%;
+	height: auto;
+}
+
+/* Story (landing) */
+
+body.page-template-template-story-php .each-story-container {
+	background: #0089a7;
+	min-height: 100%;
+	position: relative;
+	z-index: 99999;
+}
+body.page-template-template-story-php .each-story {
+	display: table;
+	text-align: center;
+	padding: 30px;
+	background: #0089a7;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	cursor: pointer;
+	transition: all .2s linear; 
+    -o-transition: all .2s linear; 
+    -moz-transition: all .2s linear; 
+    -webkit-transition: all .2s linear;
+}
+body.page-template-template-story-php .each-story:hover {
+	background: #ffffff;
+}
+body.page-template-template-story-php .each-story:hover span.each-story-title {
+	color: #141b41;
+}
+body.page-template-template-story-php .each-story.active span.each-story-title {
+	border-bottom: 3px solid;
+}
+body.page-template-template-story-php .each-story span.each-story-title {
+	font-family: 'Bureau Grotesque Regular';
+	font-size: 17px;
+	display: table-cell;
+	vertical-align: middle;
+	letter-spacing: 1px;
+	color: #ffffff;
+}
+body.page-template-template-story-php .each-story-separator {
+	background: #ffffff;
+	height: 8px;
+	width: 8px;
+	border-radius: 50%;
+	text-align: center;
+	margin: 10px auto;
+}
+body.page-template-template-story-php .each-story-separator:last-of-type {
+	display: none;
+}
+body.page-template-template-story-php .each-story-content {
+	left: -43.3333%;
+	display: none;
+}
+
+/* Friends */
+
+ul.friends-list {
+	font-family: 'Bureau Grotesque Regular';
+	font-size: 14px;
+}
+ul.friends-list, ul.friends-list li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* Standard (modal) */
+
+.reveal-modal-bg { 
+	position: fixed;
+	height: 100%; 
+	width: 100%; 
+	background: #000000; 
+	background: rgba(0, 0, 0, 0.9); 
+	z-index: 40; 
+	display: none; 
+	top: 0; 
+	left: 0;
+}
+.reveal-modal { 
+	background: #ffffff;
+	visibility: hidden; 
+	display: none; 
+	top: 100px; 
+	left: 50%; 
+	margin-left: -260px; 
+	width: 520px; 
+	position: absolute; 
+	z-index: 41; 
+	padding: 30px;
+}
+.reveal-modal h4 {
+	font-size: 1em;
+}
+.reveal-modal .close-reveal-modal { 
+	position: absolute; 
+	top: 13px; 
+	right: 12px; 
+	color: #000000;
+	cursor: pointer;
+	font-size: 1.2em;
+}
+.reveal-modal.small { 
+	width: 30%; 
+	margin-left: -15%;
+}
+.reveal-modal.medium { 
+	width: 40%; 
+	margin-left: -20%;
+}
+.reveal-modal.large { 
+	width: 60%; 
+	margin-left: -30%;
+}
+.reveal-modal.xlarge { 
+	width: 70%; 
+	margin-left: -35%; 
+}
+.reveal-modal.expand { 
+	width: 90%; 
+	margin-left: -45%; 
+}
+.reveal-modal .row { 
+	min-width: 0; 
+	margin-bottom: 10px; 
+}
+.reveal-modal > :first-child { 
+	margin-top: 0; 
+}
+.reveal-modal > :last-child { 
+	margin-bottom: 0; 
+}
+
+/* Fancybox (modal) */
+
+.fancybox-overlay {
+	background: rgba(255,255,255,0.8) !important;
+}
+.fancybox-skin {
+	border: 0 !important;
+	padding: 0 !important;
+	background: none !important;
+	box-shadow: none !important;
+}
+.fancybox-wrap {
+	width: auto !important;	
+}
+.fancybox-outer a:hover {
+	border-bottom: 0 !important;
+}
+.fancybox-close {
+	font-family: 'Bureau Grotesque Regular', sans-serif;
+	font-size: 12px !important;
+	height: auto !important;
+	width: auto !important;
+    right: 25px !important;
+    top: 20px !important;
+	color: #000000 !important;	
+	position: fixed !important;
+}
+.fancybox-close:after {
+	content: 'Close';
+}
+.fancybox-inner {
+	overflow: visible !important;
+}
+.fancybox-next {
+	font-family: 'Bureau Grotesque Regular', sans-serif;
+	height: auto !important;
+	width: auto !important;
+	padding: 10px 15px !important;
+	top: 45% !important;
+	right: -100px !important;
+	color: #000000;
+	font-size: 12px !important;
+}
+.fancybox-next:hover {
+	color: #000000 !important;
+	border-bottom: 2px solid !important;
+}
+.fancybox-next:after {
+	content: 'Next';
+}
+.fancybox-prev {
+	font-family: 'Bureau Grotesque Regular', sans-serif;
+	height: auto !important;
+	width: auto !important;
+	padding: 10px 15px !important;
+	top: 45% !important;
+	left: -100px !important;
+	color: #000000;
+	font-size: 12px !important;
+}
+.fancybox-prev:hover {
+	color: #000000 !important;
+	border-bottom: 2px solid !important;
+}
+.fancybox-prev:after {
+	content: 'Prev';
+}
+
+/* Signup form */
+
+#subForm {
+	font-family: 'Bureau Grotesque Regular';
+	color: #141B41;	
+}
+#subForm label {
+	float: left;
+	width: 150px;
+	color: #141B41;	
+}
+#subForm input[type=text] {
+	border: 2px solid #141B41;
+	background: none;
+	color: #141B41;
+	border-radius: 0;
+	-webkit-appearance: none;
+	outline: none;
+	margin-bottom: 5px;
+	width: 80%;
+	text-indent: 5px;
+}
+#subForm input[type=submit] {
+	font-family: 'Bureau Grotesque Regular';
+	letter-spacing: 1px;
+	font-weight: normal;
+	font-size: 18px;
+	border-radius: 0;
+	-webkit-appearance: none;
+	background: #141B41;
+	color: #ffffff;
+	outline: none;
+	border: 0 none;
+	margin-top: 10px;
+	padding: 10px 15px;
+	cursor: pointer;
+}
+#subForm input[type=submit]:hover {
+	background: #00855a;
+	color: #ffffff;
+}
+#subForm .confirmation-message {
+	display: none;
+	margin-top: 15px;
+}
+
+/* Isotope */
+
+.isotope, .isotope .isotope-item {
+	-webkit-transition-duration: 0.8s;
+	-moz-transition-duration: 0.8s;
+	-ms-transition-duration: 0.8s;
+	-o-transition-duration: 0.8s;
+	transition-duration: 0.8s;
+}
+.isotope {
+	-webkit-transition-property: height, width;
+	-moz-transition-property: height, width;
+	-ms-transition-property: height, width;
+	-o-transition-property: height, width;
+	transition-property: height, width;
+}
+.isotope .isotope-item {
+	-webkit-transition-property: -webkit-transform, opacity;
+	-moz-transition-property: -moz-transform, opacity;
+	-ms-transition-property: -ms-transform, opacity;
+	-o-transition-property: -o-transform, opacity;
+	transition-property: transform, opacity;
+}
+
+/* Twitter feed styles (manual) */
+
+.twitter-timeline {
+	font-family: 'Bureau Grotesque Regular' !important;
+}
+
+@media only screen and (max-width: 767px) {
+
+/* Global */
+
+.columns {
+	height: auto;
+}
+.suffix_three {
+	margin-right: 0;
+}
+[class*="column"] + [class*="column"]:last-child {
+	float: none;
+}
+#overlay-preload {
+	background: #ffffff;
+}
+body.home #overlay-preload, body.page-id-201 #overlay-preload {
+	background: #101532 url('img/bg/union-jack.png') no-repeat 50% 50% fixed;
+	left: 0;
+}
+
+/* Header */
+
+.fixed-navigation {
+	width: 100%;
+	height: auto;
+}
+
+/* Navigation */
+
+.menu-main-navigation-container {
+	margin: 3em 0 3.5em 0;
+}
+.menu-main-navigation-container ul.menu li {
+	margin-right: 0.5em;
+}
+.full-navigation {
+	display: none;
+}
+.mobile-navigation {
+	display: block;
+}
+.mobile-navigation .menu-holder {
+	padding: 20px 0;
+	margin-bottom: 20px;
+	font-size: 21px;
+	font-family: 'Bureau Grotesque Regular', sans-serif;
+	cursor: pointer;
+	position: absolute;
+	margin-top: -60px;
+	background: #fffbf2 url('img/logo-roundel.svg') 5% 0 no-repeat;
+	background-size: contain;
+	background-origin: content-box;
+}
+.mobile-navigation .menu-holder .ss-icon {
+	margin-right: 5px;
+	font-size: 19px;
+}
+.mobile-navigation-children {
+	display: none;
+}
+.mobile-navigation-children .fixed-navigation {
+	top: 0;
+	position: absolute;
+	margin-top: 0;
+	z-index: 9999;
+}
+.mobile-navigation-children .fixed-navigation .social-media-container {
+	padding-top: 40px; /* Temp */
+	padding-bottom: 40px;
+}
+.mobile-navigation .menu-main-navigation-container ul.menu {
+	text-align: center;
+}
+.mobile-navigation .menu-main-navigation-container ul.menu li {
+	margin: 0;
+}
+.social-media-container ul {
+	margin-left: 0 !important;
+	text-align: center;
+}
+
+/* Content */
+
+.content-container {
+	margin-top: 60px !important; 
+}
+.first-margin-offset {
+	margin-top: 0;
+}
+
+/* Age Verification */
+
+#av-overlay-wrap {
+	position: absolute !important;
+	top: 0 !important;
+}
+#av-overlay {
+	left: auto !important;
+	width: 100% !important;
+	height: auto !important;
+	top: 0 !important;
+}
+.privacy-statement-pre-age {
+	width: 100%;
+	top: -80px;
+	left: 0;
+	position: absolute;
+}
+#av-overlay p {
+	font-size: 12px;
+}
+
+/* Journal */
+
+body.page-template-template-journal-php .each-journal-image-container {
+	top: -20px;
+}
+body.page-template-template-journal-php .each-journal-image {
+	width: 50%;
+}
+body.page-template-template-journal-php .each-journal-image-caption {
+	width: 100%;
+}
+body.page-template-template-journal-php .off-white-content.twitter-feed {
+	position: relative;
+	width: auto;
+}
+
+/* Blog */
+
+body.blog .each-journal-image, body.blog .each-journal-image img {
+	width: 100%;
+}
+body.blog .content-container .row > div:first-child {
+	margin-top: 0;
+}
+body.blog .each-journal-image-caption {
+	width: 100%;
+	height: auto !important;
+}
+body.blog .off-white-content.twitter-feed {
+	position: relative;
+	width: auto;
+	margin: 0;
+	height: auto;
+	min-height: auto;
+}
+body.blog .each-journal-text-only p {
+	font-family: 'Clarendon Condensed Bold', sans-serif;
+	font-size: 21px;
+}
+body.blog .each-journal-text-only-text p {
+	font-family: 'Bureau Grotesque Regular';
+	font-size: 12px;
+}
+
+/* Brews (landing) */
+
+body.page-template-template-brews-php .each-brew span.each-brew-description {
+	font-size: 14px;
+}
+body.page-template-template-brews-php .each-brew {
+	display: none;
+}
+body.page-template-template-brews-php .each-brew-separator {
+	display: none;
+}
+body.page-template-template-brews-php .each-brew-content {
+	display: block !important;
+	left: 0 !important;
+}
+body.page-template-template-brews-php .each-brew-content.ale {
+	background: #be863c;
+}
+body.page-template-template-brews-php .each-brew-content.bramling {
+	background: #00855a;
+}
+body.page-template-template-brews-php .each-brew-content.bullet {
+	background: #f07d00;
+}
+body.page-template-template-brews-php .each-brew-content.miami-weisse {
+	background: #0089a7;
+}
+
+/* Story (landing) */
+
+body.page-template-template-story-php .each-story {
+	display: none;
+}
+body.page-template-template-story-php .each-story-separator {
+	display: none;
+}
+body.page-template-template-story-php .each-story-content {
+	display: block !important;
+	left: 0 !important;
+}
+
+/* Modal */
+
+.reveal-modal.small, .reveal-modal.medium, .reveal-modal.large, 
+.reveal-modal.xlarge, .reveal-modal.expand { 
+	width: 90%; 
+	margin-left: -45%; 
+}
+
+}
+
+@media only screen and (max-width: 480px) {
+
+/* Global */
+
+.no-mobile {
+	display: none !important;
+}
+
+/* Journal */
+
+body.page-template-template-journal-php .each-journal-image {
+	width: 100%;
+}
+body.page-template-template-journal-php .each-journal-image-caption {
+	position: relative;
+	margin: 0;
+}
+
+}
