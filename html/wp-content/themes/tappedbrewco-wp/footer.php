@@ -9,8 +9,8 @@
         <?php wp_nav_menu( array( 'container' => 'nav', 'fallback_cb' => 'starkers_menu', 'theme_location' => 'primary' ) ); ?>
         <div class="social-media-container">
           <ul>
-            <li><a class="ss-social ss-icon" href="https://www.facebook.com/pages/The-Sheffield-Tap/222243297786784" target="_blank">facebook</a></li>
-            <li><a class="ss-social ss-icon" href="https://twitter.com/TappedBrewCo" target="_blank">twitter</a></li>
+            <li><a class="ss-social ss-icon" href="https://www.facebook.com/pages/Tapped-Leeds/428565417243126" target="_blank">facebook</a></li>
+            <li><a class="ss-social ss-icon" href="https://twitter.com/tappedleeds" target="_blank">twitter</a></li>
           </ul>
         </div>
       </div>
