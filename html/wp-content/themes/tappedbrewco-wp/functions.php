@@ -198,7 +198,4 @@ function starkers_posted_in() {
 }
 endif;
 
-/* Manual */
-
-add_image_size( 'journal-standard', 600, 9999 ); //600 pixels wide and unlimited height
-add_image_size( 'brew-standard', 600, 9999 ); //600 pixels wide and unlimited height
+require 'functions-tapped.php';

@@ -161,7 +161,7 @@ a.logo {
 	background-size: contain;
 	background-origin: content-box;
 	text-indent: -99999px;
-	margin: 1em 0;
+	margin: 40px 0 1em 0;
 }
 
 /* Navigation */
@@ -176,11 +176,10 @@ a.logo {
 	list-style: none;
 }
 .menu-main-navigation-container ul.menu {
-	 text-align: left;
+	 text-align: center;
 }
 .menu-main-navigation-container ul.menu li {
 	display: block;
-	margin-left: 51%;
 }
 .menu-main-navigation-container ul.menu li a {
 	font-size: 17px;
@@ -190,8 +189,7 @@ a.logo {
 	border-bottom: 4px solid;
 }
 .social-media-container ul {
-	margin-left: 49% !important;
-	text-align: left;
+	text-align: center;
 }
 .social-media-container ul, .social-media-container ul li {
 	margin: 0;
@@ -340,6 +338,24 @@ a.logo {
 	cursor: pointer;
 }
 
+/* Home */
+
+.home-tweet ul,
+.home-tweet ul li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.home-tweet ul li {
+	font-family: 'Bureau Grotesque Regular';
+	font-size: 12px;
+	text-indent: 0 !important;
+	margin-bottom: 20px;
+}
+.home-tweet ul li .date {
+	font-size: 12px;
+}
+
 /* Content */
 
 .content-container {
@@ -351,7 +367,7 @@ a.logo {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	color: #141b41;
+	color: #557686;
 	margin-bottom: 0;
 	position: relative;
 	min-height: 100%;
@@ -368,7 +384,7 @@ a.logo {
 }
 .content-area h3 {
 	font-size: 34px;
-	color: #141b41;
+	color: #557686;
 	font-weight: normal;
 }
 .content-area h4 {
@@ -394,13 +410,13 @@ a.logo {
 }
 .content-area.off-white-content {
 	background: #fff6e1;
-	color: #141b41;
+	color: #557686;
 }
 .content-area.off-white-content a {
-	color: #141b41;
+	color: #557686;
 }
 .content-area.navy-content {
-	background: #141b41;
+	background: #557686;
 	color: #ffffff;
 }
 .content-area.navy-content h3 {
@@ -408,7 +424,7 @@ a.logo {
 }
 .content-area.blue-content,
 .content-area.miami-weisse-content {
-	background: #0089a7;
+	background: #f37943;
 	color: #ffffff;
 }
 .content-area.blue-content h3,
@@ -417,7 +433,7 @@ a.logo {
 }
 .content-area.green-content, 
 .content-area.bramling-content {
-	background: #00855a;
+	background: #3cba94;
 	color: #ffffff;
 }
 .content-area.green-content h3,
@@ -444,7 +460,7 @@ a.logo {
 }
 .content-area.red-red-content,
 .content-area.bullet-content {
-	background: #bf3a3f;
+	background: #cd8d26;
 	color: #ffffff;
 }
 .content-area.red-red-content h3,
@@ -511,7 +527,7 @@ body.page-template-template-journal-php .each-journal-image img:hover {
 }
 body.page-template-template-journal-php .each-journal-image-caption {
 	width: 50%;
-	background: #0089a7;
+	background: #f37943;
 	color: #ffffff;
 	position: absolute;
 	top: 0;
@@ -556,7 +572,7 @@ body.blog .each-journal-image img:hover {
 	-o-filter: grayscale(0%);
 }
 body.blog .each-journal-image-caption {
-	background: #0089a7;
+	background: #f37943;
 	color: #ffffff;
 	height: 100%;
 	padding: 30px;
@@ -601,7 +617,7 @@ body.blog .blog-pagination-container .less-posts a {
 	font-family: 'Bureau Grotesque Regular';
 	background: #fff6e1;
 	display: inline-block;
-	color: #141b41;
+	color: #557686;
 	padding: 20px;
 	float: left;
 }
@@ -609,7 +625,7 @@ body.blog .blog-pagination-container .more-posts a {
 	font-family: 'Bureau Grotesque Regular';
 	background: #fff6e1;
 	display: inline-block;
-	color: #141b41;
+	color: #557686;
 	padding: 20px;
 	float: right;
 }
@@ -655,7 +671,7 @@ body.page-template-template-brews-php .each-brew span.each-brew-title {
 body.page-template-template-brews-php .each-brew span.each-brew-description {
 	font-family: 'Bureau Grotesque Regular';
 	font-size: 14px;
-	color: #141b41;
+	color: #557686;
 	display: block;
 	text-align: center;
 	margin-top: 5px;
@@ -666,13 +682,13 @@ body.page-template-template-brews-php .each-brew.ale {
 	color: #be863c;
 }
 body.page-template-template-brews-php .each-brew.bramling {
-	color: #00855a;
+	color: #3cba94;
 }
 body.page-template-template-brews-php .each-brew.bullet {
 	color: #f07d00;
 }
 body.page-template-template-brews-php .each-brew.miami-weisse {
-	color: #0089a7;
+	color: #f37943;
 }
 body.page-template-template-brews-php .each-brew-separator {
 	background: #1B234B;
@@ -704,10 +720,131 @@ body.page-template-template-brews-php .each-brew-image img {
 	height: auto;
 }
 
+/* Food/Menu (landing) */
+
+body.page-template-template-food-php .each-menu-item-container {
+	background: #fff6e1;
+	min-height: 100%;
+	position: relative;
+	z-index: 99999;
+}
+body.page-template-template-food-php .each-menu-item {
+	display: table;
+	text-align: center;
+	color: #C4303A;
+	padding: 30px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	transition: all .2s linear; 
+    -o-transition: all .2s linear; 
+    -moz-transition: all .2s linear; 
+    -webkit-transition: all .2s linear;
+}
+body.page-template-template-food-php .each-menu-item-container .each-menu-item:nth-of-type(odd) {
+	background: #fff6e1;
+}
+body.page-template-template-food-php .each-menu-item-container .each-menu-item:nth-of-type(even) {
+	background: #ffffff;
+}
+body.page-template-template-food-php .each-menu-item span.each-menu-item-title {
+	font-family: 'Clarendon Condensed Bold';
+	font-size: 34px;
+	display: table-cell;
+	vertical-align: middle;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+body.page-template-template-food-php .each-menu-item span.each-menu-item-title .price {
+	font-size: 24px;
+	color: #14193B;
+	display: inline-block;
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+body.page-template-template-food-php .each-menu-item span.each-menu-item-description {
+	font-family: 'Bureau Grotesque Regular';
+	font-size: 14px;
+	color: #557686;
+	display: block;
+	text-align: center;
+	text-transform: none;
+	letter-spacing: 1px;
+	width: 50%;
+	margin: 5px auto 0 auto;
+	line-height: 1.4em;
+}
+body.page-template-template-food-php .each-menu-item-separator {
+	background: #1B234B;
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	text-align: center;
+	margin: 10px auto;
+}
+body.page-template-template-food-php .each-menu-item-separator:last-of-type {
+	display: none;
+}
+
+/* Gallery (landing) */
+
+/*body.post-type-archive-gallery .default-content-area:nth-of-type(odd) {
+	background: #fff6e1;
+}
+body.post-type-archive-gallery .default-content-area:nth-of-type(even) {
+	background: #ffffff;
+}*/
+.each-gallery-container {
+	margin-bottom: 50px;
+}
+.each-gallery-container:last-of-type {
+	margin-bottom: 0;
+}
+.each-gallery-container h3 {
+	color: #ffffff;
+	margin: 0 0 30px 0;
+}
+.each-gallery-image {
+	float: left;
+}
+.each-gallery-image img {
+	display: block;
+	width: 170px;
+	height: auto;
+}
+.each-gallery-image img:hover {
+	opacity: 0.8;
+}
+body.post-type-archive-gallery .blog-pagination-container {
+	position: relative;
+	top: 45px;
+}
+body.post-type-archive-gallery .blog-pagination-container .six {
+	background: #fff6e1;
+}
+body.post-type-archive-gallery .blog-pagination-container .less-posts a {
+	font-family: 'Bureau Grotesque Regular';
+	background: #fff6e1;
+	display: inline-block;
+	color: #557686;
+	padding: 20px;
+	float: left;
+}
+body.post-type-archive-gallery .blog-pagination-container .more-posts a {
+	font-family: 'Bureau Grotesque Regular';
+	background: #fff6e1;
+	display: inline-block;
+	color: #557686;
+	padding: 20px;
+	float: right;
+}
+
+
 /* Story (landing) */
 
 body.page-template-template-story-php .each-story-container {
-	background: #0089a7;
+	background: #f37943;
 	min-height: 100%;
 	position: relative;
 	z-index: 99999;
@@ -716,7 +853,7 @@ body.page-template-template-story-php .each-story {
 	display: table;
 	text-align: center;
 	padding: 30px;
-	background: #0089a7;
+	background: #f37943;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -731,7 +868,7 @@ body.page-template-template-story-php .each-story:hover {
 	background: #ffffff;
 }
 body.page-template-template-story-php .each-story:hover span.each-story-title {
-	color: #141b41;
+	color: #557686;
 }
 body.page-template-template-story-php .each-story.active span.each-story-title {
 	border-bottom: 3px solid;
@@ -911,17 +1048,17 @@ ul.friends-list, ul.friends-list li {
 
 #subForm {
 	font-family: 'Bureau Grotesque Regular';
-	color: #141B41;	
+	color: #557686;	
 }
 #subForm label {
 	float: left;
 	width: 150px;
-	color: #141B41;	
+	color: #557686;	
 }
 #subForm input[type=text] {
-	border: 2px solid #141B41;
+	border: 2px solid #557686;
 	background: none;
-	color: #141B41;
+	color: #557686;
 	border-radius: 0;
 	-webkit-appearance: none;
 	outline: none;
@@ -936,7 +1073,7 @@ ul.friends-list, ul.friends-list li {
 	font-size: 18px;
 	border-radius: 0;
 	-webkit-appearance: none;
-	background: #141B41;
+	background: #557686;
 	color: #ffffff;
 	outline: none;
 	border: 0 none;
@@ -945,7 +1082,7 @@ ul.friends-list, ul.friends-list li {
 	cursor: pointer;
 }
 #subForm input[type=submit]:hover {
-	background: #00855a;
+	background: #3cba94;
 	color: #ffffff;
 }
 #subForm .confirmation-message {
@@ -1159,13 +1296,13 @@ body.page-template-template-brews-php .each-brew-content.ale {
 	background: #be863c;
 }
 body.page-template-template-brews-php .each-brew-content.bramling {
-	background: #00855a;
+	background: #3cba94;
 }
 body.page-template-template-brews-php .each-brew-content.bullet {
 	background: #f07d00;
 }
 body.page-template-template-brews-php .each-brew-content.miami-weisse {
-	background: #0089a7;
+	background: #f37943;
 }
 
 /* Story (landing) */

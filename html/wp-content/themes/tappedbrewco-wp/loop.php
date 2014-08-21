@@ -59,7 +59,7 @@
     <?php endif; ?>
   <div class="default-content-area content-area off-white-content twitter-feed delay-3 first-margin-offset">
     <h3><span class="ss-icon ss-social">twitter</span></h3>
-    <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/TappedBrewCo" data-widget-id="351638081885057026" data-chrome="noheader nofooter noborders transparent noscrollbar" data-link-color="#141b41" data-tweet-limit="2">Tweets by @TappedBrewCo</a>
+    <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/TappedBrewCo" data-widget-id="351638081885057026" data-chrome="noheader nofooter noborders transparent noscrollbar" data-link-color="#141b41" data-tweet-limit="4">Tweets by @TappedBrewCo</a>
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     <p><a href="https://www.twitter.com/tappedbrewco" target="_blank">Follow us on Twitter</a></p>
   </div>

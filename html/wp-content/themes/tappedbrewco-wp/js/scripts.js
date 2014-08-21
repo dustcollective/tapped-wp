@@ -71,6 +71,21 @@ $(function () {
     });
 });
 
+// Food/Menu
+var menuHeight = $('body.page-template-template-food-php .each-menu-item-container').height();
+if ($(window).width() < 767) {
+	$('body.page-template-template-food-php .red-red-content').css('height', 'auto');
+} else {
+   $('body.page-template-template-food-php .red-red-content').css('height', menuHeight);
+}
+$(window).resize(function() {
+	if ($(window).width() < 767) {
+		$('body.page-template-template-food-php .red-red-content').css('height', 'auto');
+	} else {
+		$('body.page-template-template-food-php .red-red-content').css('height', menuHeight);
+	}
+});
+
 // Fancybox
 $(document).ready(function() {
 	$('.fancybox').fancybox();
@@ -78,11 +93,18 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     var myColors = [
-        '#141b41', '#008552', '#c03236', '#be863c'
+        '#cd8d26', '#557686', '#f37943', '#3cba94'
     ];
     var i = 0;
     $('.each-journal-text-only').each(function() {
         $(this).css('background-color', myColors[i]);
         i = (i + 1) % myColors.length;
     });
+});
+
+// Twitter
+$('.home-tweet').twittie({
+	dateFormat: '%b. %d, %Y',
+	template: '{{tweet}} <div class="date">{{date}}</div>',
+	count: 4
 });

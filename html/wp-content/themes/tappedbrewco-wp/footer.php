@@ -25,8 +25,8 @@
       </a>
       <div class="social-media-container">
         <ul>
-          <li><a class="ss-social ss-icon" href="https://www.facebook.com/pages/The-Sheffield-Tap/222243297786784" target="_blank">facebook</a></li>
-          <li><a class="ss-social ss-icon" href="https://twitter.com/TappedBrewCo" target="_blank">twitter</a></li>
+          <li><a class="ss-social ss-icon" href="https://www.facebook.com/pages/Tapped-Leeds/428565417243126" target="_blank">facebook</a></li>
+          <li><a class="ss-social ss-icon" href="https://twitter.com/tappedleeds" target="_blank">twitter</a></li>
         </ul>
       </div>
       <?php wp_nav_menu( array( 'container' => 'nav', 'fallback_cb' => 'starkers_menu', 'theme_location' => 'primary' ) ); ?>
@@ -41,6 +41,24 @@
 <script src="<?php bloginfo('template_directory'); ?>/js/libs/jquery.isotope.min.js"></script> 
 <script src="<?php bloginfo('template_directory'); ?>/js/libs/jquery.fancybox.pack.js"></script> 
 <script src="<?php bloginfo('template_directory'); ?>/js/libs/jquery.backstretch.min.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/js/libs/tweetie.min.js"></script>
+
+<?php if ( is_page( 'food-menu' ) ) : ?>
+
+<?php if ( get_field('background_slider', 520) ) : ?>
+<script>
+$.backstretch([
+	<?php while ( has_sub_field('background_slider', 520) ): ?>
+	"<?php the_sub_field('each_image', 520); ?>",
+	<?php endwhile; ?>
+], {
+	fade: 750,
+	duration: 5000
+});
+</script>
+<?php endif; ?>
+
+<?php else : ?>
 
 <?php switch(date('N')) {
 case 1: ?>
@@ -143,6 +161,9 @@ $.backstretch([
 <?php break;
 default:
 } ?>
+
+<?php endif; ?>
+
 <script src="<?php bloginfo('template_directory'); ?>/js/scripts.js"></script>
 
 <?php wp_footer(); ?>

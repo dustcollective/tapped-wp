@@ -36,39 +36,7 @@ get_header(); ?>
 			?>
     </div>
     <div class="offset-by-two three columns">
-      <div class="default-content-area content-area off-white-content twitter-feed delay-3 first-margin-offset">
-        <h3><span class="ss-icon ss-social">twitter</span></h3>
-        <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script> 
-        <script>
-				new TWTR.Widget({
-				version: 2,
-				type: 'profile',
-				rpp: 4,
-				interval: 30000,
-				width: 'auto',
-				height: 300,
-				theme: {
-				shell: {
-				background: '#fff6e1',
-				color: '#1b234b'
-				},
-				tweets: {
-				background: '#fff6e1',
-				color: '#1b234b',
-				links: '#1b234b'
-				}
-				},
-				features: {
-				scrollbar: false,
-				loop: false,
-				live: false,
-				behavior: 'all'
-				}
-				}).render().setUser('tappedbrewco').start();
-				</script> 
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        <p><a href="https://www.twitter.com/tappedbrewco" target="_blank">Follow us on Twitter</a></p>
-      </div>
+      
     </div>
   </div>
   
